@@ -7,9 +7,11 @@ int main() {
 
     if (N > B) {
         std::cout << (N * (1 - Y / 100));
-    } else if (N > A) {
+    }
+    else if (N > A) {
         std::cout << N * (1 - X / 100);
-    } else {
+    }
+    else {
         std::cout << N;
     }
 
