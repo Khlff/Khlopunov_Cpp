@@ -1,1 +1,0 @@
-/usr/bin/c++.exe -g -Wl,--enable-auto-import CMakeFiles/Khlopunov_Cpp.dir/CW-1-1/CW-1-1.cpp.o -o Khlopunov_Cpp.exe -Wl,--out-implib,libKhlopunov_Cpp.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
