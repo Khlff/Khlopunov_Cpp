@@ -4,4 +4,4 @@ project(Khlopunov_Cpp)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(Khlopunov_Cpp
-        1.cpp)
+        CW-1-1/CW-1-1.cpp)
