@@ -1,18 +1,17 @@
 #include <iostream>
 
 int main() {
+    double purchaseSum, firstSumSale, secondSumSale, smallDiscount, bigDiscount;
+    std::cin >> purchaseSum >> firstSumSale >> secondSumSale >> smallDiscount >> bigDiscount;
 
-    double N, A, B, X, Y;
-    std::cin >> N >> A >> B >> X >> Y;
-
-    if (N > B) {
-        std::cout << (N * (1 - Y / 100));
+    if (purchaseSum > secondSumSale) {
+        std::cout << (purchaseSum * (1 - bigDiscount / 100));
     }
-    else if (N > A) {
-        std::cout << N * (1 - X / 100);
+    else if (purchaseSum > firstSumSale) {
+        std::cout << purchaseSum * (1 - smallDiscount / 100);
     }
     else {
-        std::cout << N;
+        std::cout << purchaseSum;
     }
 
     return 0;
