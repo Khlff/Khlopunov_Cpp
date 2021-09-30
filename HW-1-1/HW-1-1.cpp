@@ -2,18 +2,18 @@
 #include <cmath>
 
 int main() {
-    double quadCoeff, linСoeff, freeCoeff;
-    std::cin >> quadCoeff >> linСoeff >> freeCoeff;
+    double quadraticСoefficient, linearСoefficient, freeСoefficient;
+    std::cin >> quadraticСoefficient >> linearСoefficient >> freeСoefficient;
 
-    if (quadCoeff != 0) {
-        double Discriminant = pow(linСoeff, 2) - 4 * quadCoeff * freeCoeff;
+    if (quadraticСoefficient != 0) {
+        double Discriminant = pow(linearСoefficient, 2) - 4 * quadraticСoefficient * freeСoefficient;
 
         if (Discriminant < 0) {
             return 1;
         }
 
-        double x1 = (-linСoeff - sqrt(Discriminant)) / (2 * quadCoeff);
-        double x2 = (-linСoeff + sqrt(Discriminant)) / (2 * quadCoeff);
+        double x1 = (-linearСoefficient - sqrt(Discriminant)) / (2 * quadraticСoefficient);
+        double x2 = (-linearСoefficient + sqrt(Discriminant)) / (2 * quadraticСoefficient);
 
         if (x1 == x2) {
             std::cout << x1;
@@ -21,10 +21,10 @@ int main() {
             std::cout << x1 << " " << x2;
         }
 
-    } else if (freeCoeff != 0) {
-        std::cout << -freeCoeff / linСoeff;
+    } else if (freeСoefficient != 0) {
+        std::cout << -freeСoefficient / linearСoefficient;
     } else {
-        return 1
+        std::cout << 0;
     }
 
     return 0;
