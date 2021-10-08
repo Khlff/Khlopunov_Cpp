@@ -1,6 +1,14 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
+#include <sstream>
+
+template<typename T>
+inline std::string ToString(T tX) {
+    std::ostringstream oStream;
+    oStream << tX;
+    return oStream.str();
+}
 
 int main() {
     int inputNumber, numberSystem;
@@ -8,12 +16,10 @@ int main() {
     std::string answer;
 
     while (inputNumber >= numberSystem) {
-        answer += std::to_string(inputNumber % numberSystem);
+        answer = ToString(inputNumber % numberSystem) + answer;
         inputNumber = inputNumber / numberSystem;
     }
-    answer += std::to_string(inputNumber);
-
-    std::reverse(answer.begin(), answer.end());
+    answer = ToString(inputNumber) + answer;
     std::cout << answer;
     return 0;
 }
