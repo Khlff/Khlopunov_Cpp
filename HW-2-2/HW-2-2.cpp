@@ -1,16 +1,19 @@
+//f-first rectangle, s-second rectangle
+
+//The first point is the lower left, the following are clockwise
+//Example:
+//Second Third
+//First Fourth
+
 #include <algorithm>
 #include <iostream>
 
 int main() {
-    //    Dots
-    //|Second Third|
-    //|First Fourth|
+    int fXFirst, fYFirst, fXSecond, fYSecond, fXThird, fYThird, fXFourth, fYFourth,
+        sXFirst, sYFirst,sXSecond, sYSecond, sXThird, sYThird, sXFourth, sYFourth;
 
-    //f-first rectangle, s-second rectangle
-
-    int fXFirst, fYFirst, fXSecond, fYSecond, fXThird, fYThird, fXFourth, fYFourth, sXFirst, sYFirst, sXSecond, sYSecond, sXThird, sYThird, sXFourth, sYFourth;
-    std::cin >> fXFirst >> fYFirst >> fXSecond >> fYSecond >> fXThird >> fYThird >> fXFourth >> fYFourth >> sXFirst
-             >> sYFirst >> sXSecond >> sYSecond >> sXThird >> sYThird >> sXFourth >> sYFourth;
+    std::cin >> fXFirst >> fYFirst >> fXSecond >> fYSecond >> fXThird >> fYThird >> fXFourth >> fYFourth
+             >> sXFirst >> sYFirst >> sXSecond >> sYSecond >> sXThird >> sYThird >> sXFourth >> sYFourth;
 
     int leftEdge = std::max(fXFirst, sXFirst);
     int bottomEdge = std::max(fYFirst, sYFirst);
@@ -27,5 +30,5 @@ int main() {
     std::cout << "YES ";
     std::cout << width * height;
     return 0;
-
 }
+
