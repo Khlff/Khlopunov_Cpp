@@ -2,6 +2,12 @@
 #include <iostream>
 
 int main() {
+    //    Dots
+    //|Second Third|
+    //|First Fourth|
+
+    //f-first rectangle, s-second rectangle
+
     int fXFirst, fYFirst, fXSecond, fYSecond, fXThird, fYThird, fXFourth, fYFourth, sXFirst, sYFirst, sXSecond, sYSecond, sXThird, sYThird, sXFourth, sYFourth;
     std::cin >> fXFirst >> fYFirst >> fXSecond >> fYSecond >> fXThird >> fYThird >> fXFourth >> fYFourth >> sXFirst
              >> sYFirst >> sXSecond >> sYSecond >> sXThird >> sYThird >> sXFourth >> sYFourth;
