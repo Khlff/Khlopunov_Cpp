@@ -3,5 +3,5 @@ project(Khlopunov_Cpp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(CW-2-1
-        CW-2-1.cpp)
+add_executable(CW-3-1
+        CW-3-1.cpp)
