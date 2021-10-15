@@ -7,7 +7,7 @@ vector<string> palindromeFilter(int minLength, vector<string> words) {
     vector<string> outputVector= {};
     for (int i = 0; i < words.size(); i++) {
         bool isPalindrome = true;
-        if (words[i].length() < minLength){
+        if (words[i].length() <= minLength){
             continue;
         }
         else {
