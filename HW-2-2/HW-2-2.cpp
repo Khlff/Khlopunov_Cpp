@@ -1,5 +1,3 @@
-//f-first rectangle, s-second rectangle
-
 //The first point is the lower left, the following are clockwise
 //Example:
 //Second Third
@@ -9,16 +7,16 @@
 #include <iostream>
 
 int main() {
-    int fXFirst, fYFirst, fXSecond, fYSecond, fXThird, fYThird, fXFourth, fYFourth,
-        sXFirst, sYFirst,sXSecond, sYSecond, sXThird, sYThird, sXFourth, sYFourth;
+    int firstXFirst, firstYFirst, firstXSecond, firstYSecond, firstXThird, firstYThird, firstXFourth, firstYFourth,
+        secondXFirst, secondYFirst,secondXSecond, secondYSecond, secondXThird, secondYThird, secondXFourth, secondYFourth;
 
-    std::cin >> fXFirst >> fYFirst >> fXSecond >> fYSecond >> fXThird >> fYThird >> fXFourth >> fYFourth
-             >> sXFirst >> sYFirst >> sXSecond >> sYSecond >> sXThird >> sYThird >> sXFourth >> sYFourth;
+    std::cin >> firstXFirst >> firstYFirst >> firstXSecond >> firstYSecond >> firstXThird >> firstYThird >> firstXFourth >> firstYFourth
+             >> secondXFirst >> secondYFirst >> secondXSecond >> secondYSecond >> secondXThird >> secondYThird >> secondXFourth >> secondYFourth;
 
-    int leftEdge = std::max(fXFirst, sXFirst);
-    int bottomEdge = std::max(fYFirst, sYFirst);
-    int topEdge = std::min(fYThird, sYThird);
-    int rightEdge = std::min(fXFourth, sXFourth);
+    int leftEdge = std::max(firstXFirst, secondXFirst);
+    int bottomEdge = std::max(firstYFirst, secondYFirst);
+    int topEdge = std::min(firstYThird, secondYThird);
+    int rightEdge = std::min(firstXFourth, secondXFourth);
 
     int width = rightEdge - leftEdge;
     int height = topEdge - bottomEdge;
