@@ -12,7 +12,6 @@ vector<int> insertSort(vector<int> inputVector) {
                 break;
             }
         }
-
     }
     return inputVector;
 }
