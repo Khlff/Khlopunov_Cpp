@@ -30,6 +30,7 @@ string wordsReversing(string rawString) {
     for (int i = 0; i < wordsList.size(); i++) {
         outputString += wordsList[i] + ' ';
     }
+
     return outputString;
 }
 
