@@ -27,7 +27,7 @@ string wasteErasing(string rawString, int maxLength) {
     for (int i = 0; i < wordsList.size(); i++) {
         outputString += wordsList[i] + ' ';
     }
-
+    outputString.erase(outputString.length() - 1, 1);
     return outputString;
 }
 
@@ -39,4 +39,3 @@ int main() {
     cout << outputWords;
     return 0;
 }
-
