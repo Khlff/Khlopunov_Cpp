@@ -42,17 +42,11 @@ string FromArabicToRoman(int inputNumber) {
 int FromRomanToArabic(string inputNumberInRoman) {
     map<string, int> dictionary;
     dictionary["I"] = 1;
-    dictionary["IV"] = 4;
     dictionary["V"] = 5;
-    dictionary["IX"] = 9;
     dictionary["X"] = 10;
-    dictionary["XL"] = 40;
     dictionary["L"] = 50;
-    dictionary["XC"] = 90;
     dictionary["C"] = 100;
-    dictionary["CD"] = 400;
     dictionary["D"] = 500;
-    dictionary["CM"] = 900;
     dictionary["M"] = 1000;
     int res = 0;
     for (int i = inputNumberInRoman.length() - 1; i >= 0; i--) {
