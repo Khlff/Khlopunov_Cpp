@@ -11,7 +11,7 @@ private:
 public:
     static std::vector<Node *> getNeighbors();
 
-    void AddNeighbor(Node *neighbor);
+    void addNeighbor(Node *neighbor);
 
     Node();
 
