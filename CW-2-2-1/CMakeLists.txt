@@ -3,5 +3,5 @@ project(Khlopunov_Cpp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(HW-2-2
-        HW-2-2.cpp)
+add_executable(CW-2-2-1
+        main.cpp LinkedList.cpp LinkedList.h)
