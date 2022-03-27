@@ -1,20 +1,20 @@
 #ifndef KHLOPUNOV_CPP_GRAPH_H
 #define KHLOPUNOV_CPP_GRAPH_H
 
-#pragma once
 #include "Node.h"
-#include "vector"
 
 class Graph {
 private:
-    std::vector<Node*> nodes = std::vector<Node*>();
+    std::vector<Node*> nodes;
+    static Node* getNextNeighbor(Node* parentNode);
 public:
+    std::vector<Node*> getNodes();
+    void addNode(Node* node);
+    void zeroingFlags(std::vector<Node*>& nodes);
+    Node* searchInDepth(int value);
+    Node* searchInWidth(int value);
+
     Graph();
-
-    std::vector<Node *> getNodes();
-
-    void addNode(Node *node);
-
     ~Graph() = default;
 };
 

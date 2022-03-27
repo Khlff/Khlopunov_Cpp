@@ -1,22 +1,29 @@
 #include "Node.h"
 
-Node::Node(Graph* ownerGraph) {
-    this->neighbors = std::vector<Node *>();
-    ownerGraph->addNode(this);
+/* -----Конструктор без передачи соседей----- */
+Node::Node(int value) {
+    this->neighbours = std::vector<Node *>();
+    this->value = value;
 }
 
-Node::Node(std::vector<Node *> n, Graph* ownerGraph) {
-    this->neighbors = n;
-    ownerGraph->addNode(this);
+/* ---------Добавляет соседа узлу-------- */
+void Node::addNeighbour(Node *neighbour) {
+    this->neighbours.push_back(neighbour);
+    neighbour->neighbours.push_back(this);
 }
 
-Node::~Node() = default;
-
-void Node::addNeighbor(Node* neighbor) {
-    this->neighbors.push_back(neighbor);
-    neighbor->neighbors.push_back(this);
+/* ---------Конструктор с передачей соседей--------- */
+Node::Node(std::vector<Node *> neighbours, int value) {
+    this->neighbours = neighbours;
+    this->value = value;
 }
 
-std::vector<Node *> Node::getNeighbors() {
-    return this->neighbors;
+/* --------Возвращает соседей узла-------- */
+std::vector<Node *> Node::getNeighbours() {
+    return this->neighbours;
+}
+
+/* ----Возвращает значение узла---- */
+int Node::getValue() {
+    return this->value;
 }
