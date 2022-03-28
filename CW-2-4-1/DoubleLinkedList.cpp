@@ -76,9 +76,12 @@ DoubleLinkedList DoubleLinkedList::fromSingleToDouble(LinkedList1::Node *node) {
     Node *mappedNode = new Node(node->value);
     doubleLinkedList->first = mappedNode;
 
-    while (mappedNode->next) {
+    LinkedList1::Node* tempSingleNode = node;
+// 5 3 2 9
+    while (tempSingleNode->next) {
         Node *tempNode = mappedNode;
-        mappedNode = mappedNode->next;
+        mappedNode = new Node(tempSingleNode->next->value);
+        tempNode->next = mappedNode;
         mappedNode->prev = tempNode;
     }
     Node *tempNode = mappedNode;

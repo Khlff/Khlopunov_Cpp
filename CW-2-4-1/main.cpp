@@ -3,11 +3,10 @@
 #include "DoubleLinkedList.h"
 
 int main() {
-    auto* myList = new LinkedList1();
-    myList->addLast(222);
+    LinkedList1* myList = new LinkedList1();
     myList->addFirst(5);
-    myList->addLast(2);
-    myList->addLast(9);
+    myList->addLast(3);
+    myList->print();
 
     auto* doubleLinkedList = new DoubleLinkedList();
     doubleLinkedList->fromSingleToDouble(myList->first);
