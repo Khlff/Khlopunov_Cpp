@@ -7,8 +7,7 @@ rationalNumbers::rationalNumbers(int numerator, int denominator) {
     if (denominator > 0) {
         this->denominator = denominator;
     } else {
-        std::cout << "~ERROR~ The denominator should be natural!" << std::endl;
-        exit(0);
+        throw std::runtime_error("Error. Denominator is 0");
     }
     this->shortenTheFraction();
 };
@@ -48,7 +47,7 @@ rationalNumbers *rationalNumbers::diffNumbers(rationalNumbers *otherNumber) {
 int rationalNumbers::LSD(rationalNumbers *otherNumber) {
     int firstDenominator = this->denominator;
     int secondDenominator = otherNumber->denominator;
-    int max = max(secondDenominator, secondDenominator);
+    int max = std::max(secondDenominator, secondDenominator);
     for (int i = max; i > 0; i++) {
         if ((i % firstDenominator == 0) && (i % secondDenominator == 0)) {
             return i;
@@ -64,6 +63,9 @@ rationalNumbers *rationalNumbers::multiplyNumbers(rationalNumbers *otherNumber) 
 }
 
 rationalNumbers *rationalNumbers::divideNumbers(rationalNumbers *otherNumber) {
+    if (otherNumber->numerator == 0) {
+        throw std::runtime_error("Error. Denominator is 0");
+    }
     bool isNegative = false;
     if (((this->numerator < 0) && (otherNumber->numerator >= 0)) ||
         ((this->numerator >= 0) && (otherNumber->numerator < 0)))
@@ -88,6 +90,9 @@ int rationalNumbers::GSD() {
             long tmp = numerator;
             numerator = denominator;
             denominator = tmp;
+        }
+        if (numerator==0){
+            return 1;
         }
         denominator = denominator - numerator;
     }
