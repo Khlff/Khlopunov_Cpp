@@ -2,7 +2,7 @@
 #include "LinkedListStack.h"
 
 int main() {
-    auto *myStack = new LinkedList();
+    auto *myStack = new LinkedListStack();
     myStack->push(12);
     myStack->push(2);
     myStack->push(15);
